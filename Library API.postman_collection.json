@@ -1,0 +1,208 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Library API",
+		"_postman_id": "439947f9-d854-8226-ef37-18e34b582aa4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Publication - DELETE",
+			"request": {
+				"url": "http://localhost:3000/api/publication/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"5be8bcca9a12ca3e08eaae2e\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - UPDATE",
+			"request": {
+				"url": "http://localhost:3000/api/publication/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5be9faa3369cb34c9c0ddfe8\",\n\t\"title\": \"Best Publication\",\n    \"body\": \"The time\",\n    \"date\": \"2018-11-13 20:20:12.111Z\",\n    \"authorId\": \"5be9fa54369cb34c9c0ddfe7\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - GET by Author",
+			"request": {
+				"url": "http://localhost:3000/api/publication/author/5be9fa54369cb34c9c0ddfe7",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - GET by Title",
+			"request": {
+				"url": "http://localhost:3000/api/publication/title/Best Publication",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - GET by ID",
+			"request": {
+				"url": "http://localhost:3000/api/publication/5be8bcca9a12ca3e08eaae2e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - POST",
+			"request": {
+				"url": "http://localhost:3000/api/publication/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"authorId\": \"5bea05ccacf889001897acd2\",\n\t\"title\": \"Where is my cheese?\",\n    \"body\": \"Best Seller\",\n    \"date\": \"2018-11-12 20:20:12.111Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Publication - Get All",
+			"request": {
+				"url": "http://localhost:3000/api/publication",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - DELETE",
+			"request": {
+				"url": "http://localhost:3000/api/author/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5be8acac1ecb892e38d58d66\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - UPDATE",
+			"request": {
+				"url": "http://localhost:3000/api/author/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"5be8bbcd9a12ca3e08eaae2d\",\n\t\"name\": \"Sebastian\",\n\t\"email\": \"seba@gmail.com\",\n\t\"birth\": \"2018-11-11 19:26:12.311Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - GET by ID",
+			"request": {
+				"url": "http://localhost:3000/api/author/5be8acac1ecb892e38d58d66",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - GET by Name",
+			"request": {
+				"url": "http://localhost:3000/api/author/name/seba",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - POST",
+			"request": {
+				"url": "http://localhost:3000/api/author/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Sebastian\",\n\t\"email\": \"sebastian@gmail.com\",\n\t\"birth\": \"2018-11-13 22:26:12.111Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author - GET All",
+			"request": {
+				"url": "http://localhost:3000/api/author/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
