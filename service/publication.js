@@ -24,14 +24,14 @@ module.exports = {
     },
 
     findByTitle: (title) => {
-        Publication.findOne({
-                title: /title/i
+        return Publication.find({
+                title: title
             })
             .populate('authors');
     },
 
     findByAuthorId: (id) => {
-        Publication.find({
+        return Publication.find({
                 authors: id
             })
             .populate({
@@ -40,13 +40,14 @@ module.exports = {
             });
     },
 
-    update: (id, title, body, date) => {
-        return Publication.update({ _id: id }, 
+    update: (id, title, body, date, authorId) => {
+        return Publication.updateOne({ _id: id }, 
             {
                 $set: {
                     title: title,
                     body: body,
-                    date: date
+                    date: date,
+                    authors: authorId
                 }
             })
     },

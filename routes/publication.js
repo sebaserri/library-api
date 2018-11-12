@@ -56,7 +56,7 @@ router.post('/', async (req, res, next) => {
 
 router.put('/', async (req, res, next) => {
   try{
-    let result = await Publication.update(req.body.title, req.body.body, req.body.date);
+    let result = await Publication.update(req.body.id, req.body.title, req.body.body, req.body.date, req.body.authorId);
     res.status(200).json({'result': result});
   } catch(e) {
     console.error(e);
