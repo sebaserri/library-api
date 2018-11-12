@@ -15,7 +15,8 @@ module.exports = {
 
     all: () => {
         return Publication.find({})
-         .populate('authors'); 
+         .populate('authors')
+         .sort({date: 1}); 
     },
 
     findById: (id) => {
@@ -23,11 +24,13 @@ module.exports = {
             .populate('authors');
     },
 
-    findByTitle: (title) => {
+    findByTitle: (title, pagination, offset, limit) => {
         return Publication.find({
                 title: title
             })
-            .populate('authors');
+            .populate('authors')
+            .skip(pagination * offset)
+            .limit(limit);
     },
 
     findByAuthorId: (id) => {

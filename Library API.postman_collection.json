@@ -61,7 +61,35 @@
 		{
 			"name": "Publication - GET by Title",
 			"request": {
-				"url": "http://localhost:3000/api/publication/title/Best Publication",
+				"url": {
+					"raw": "http://localhost:3000/api/publication/title/A Title?offset=0&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"publication",
+						"title",
+						"A Title"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
 				"method": "GET",
 				"header": [],
 				"body": {},

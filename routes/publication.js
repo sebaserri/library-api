@@ -15,8 +15,10 @@ router.get('/', async (req, res, next) => {
 });
 
 router.get('/title/:title', async (req, res, next) => {
+  const pagination = 3;
   try{
-    let publications = await Publication.findByTitle(req.params.title);
+    let { offset, limit } = validatePagination(req, pagination);
+    let publications = await Publication.findByTitle(req.params.title, pagination, offset, limit);
     res.status(200).json({'result': publications});
   } catch(e) {
     console.error(e);
@@ -75,3 +77,13 @@ router.delete('/', async (req, res, next) => {
 });
 
 module.exports = router;
+
+function validatePagination(req, pagination) {
+  let offset = 0;
+  let limit = pagination;
+  if (req.query.offset && req.query.limit) {
+    offset = Number(req.query.offset);
+    limit = Number(req.query.limit);
+  }
+  return { offset, limit };
+}
