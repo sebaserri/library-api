@@ -45,7 +45,7 @@ module.exports = {
     },
 
     update: (id, name, email, birth) => {
-        return Author.update({ _id: id }, 
+        return Author.updateOne({ _id: id }, 
             {
                 $set: {
                     name: name,

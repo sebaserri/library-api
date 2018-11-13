@@ -36,7 +36,7 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try{
     await Author.create(req.body.name, req.body.email, req.body.birth);
-    res.status(200).json({'result': 'ok'});
+    res.status(201).json({'result': 'ok'});
   } catch(e) {
     console.error(e);
     next(e);

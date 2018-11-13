@@ -49,7 +49,7 @@ router.get('/author/:authorId', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try{
     await Publication.create(req.body.title, req.body.body, req.body.date, req.body.authorId);
-    res.status(200).json({'result': 'ok'});
+    res.status(201).json({'result': 'ok'});
   } catch(e) {
     console.error(e);
     next(e);

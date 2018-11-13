@@ -34,8 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Express Routing
  */
-const authorRouter = require('./routes/author');
-const publicationRouter = require('./routes/publication');
+const authorRouter = require('../routes/author');
+const publicationRouter = require('../routes/publication');
 
 app.use('/api/author', authorRouter);
 app.use('/api/publication', publicationRouter);
@@ -55,11 +55,5 @@ app.use(function (err, req, res, next) {
     error: err
   });
 });
-
-/**
- * Starting up!!!
- */
-app.listen(process.env.SERVER_PORT, `${process.env.SERVER_HOST}`);
-console.log(`Running on http://${process.env.SERVER_HOST}:${process.env.SERVER_PORT}`);
 
 module.exports = app;
