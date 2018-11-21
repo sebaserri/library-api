@@ -3,7 +3,9 @@ A CRUD for Authors and Publications using Mongo, Node.js, Express and Docker Com
 
 ## Install
 
+```bash
 npm install
+```
 
 ## Usage
 
