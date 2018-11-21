@@ -23,5 +23,5 @@ docker-compose up
 
 ## Endpoints
 
-Import file "Library API.postman_collection.json" to run the test on Postman. There is endpoints for Publications and Authors.
+Import file "Library API.postman_collection.json" to run the test on Postman. There are endpoints for Publications and Authors.
 
