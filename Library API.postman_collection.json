@@ -173,7 +173,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": \"5be8bbcd9a12ca3e08eaae2d\",\n\t\"name\": \"Sebastian\",\n\t\"email\": \"seba@gmail.com\",\n\t\"birth\": \"2018-11-11 19:26:12.311Z\"\n}"
+					"raw": "{\n\t\"_id\": \"5be8bbcd9a12ca3e08eaae2d\",\n\t\"name\": \"Sebastian\",\n\t\"email\": \"seba@gmail.com\",\n\t\"birth\": \"2018-11-11 19:26:12.311Z\"\n}"
 				},
 				"description": ""
 			},

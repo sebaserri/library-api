@@ -45,7 +45,7 @@ router.post('/', async (req, res, next) => {
 
 router.put('/', async (req, res, next) => {
   try{
-    let author = await Author.update(req.body.id, req.body.name, req.body.email, req.body.birth);
+    let author = await Author.update(req.body._id, req.body.name, req.body.email, req.body.birth);
     res.status(200).json({'result': author});
   } catch(e) {
     console.error(e);
